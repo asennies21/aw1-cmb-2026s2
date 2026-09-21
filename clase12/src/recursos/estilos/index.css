@@ -28,11 +28,12 @@ Selectores de TIPO
 */
 html{
     font-family: Monserrat, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px; /* tamaño base que está en la raiz que sirve como referencia */
 }
 
 body{
     font-family: Monserrat;
-    background-color: aqua; /*  #000000 #ffffff */
+    background-color: #eee; /*  #000000 #ffffff */
 }
 
 header{
@@ -42,6 +43,10 @@ header{
 a{
     color: #000000;
     text-decoration: none;
+}
+p{
+    font-size: 0.8rem; /* busca la referencia de la raiz y lo multipla por el numero indicado */
+    /* em */
 }
 /* SELECTORES DE CLASE */
 
@@ -53,6 +58,8 @@ a{
 
 
 .encabezado-principal{
+    position:sticky;/* pegado */
+    top:0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -71,13 +78,32 @@ a{
 
 /* ----------------- */
 .contenido-principal{
-    background-color: aqua;
+    background-color: #fff;
+    height: 1500px;
 }
+
+/*
+COMPORTAMIENTO DE POSICIONAMIENTO ABSOLUTO
+.contenido-principal .parrafo{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #ffff00;
+    padding: 10px;
+    width: 300PX;
+} */
+
 /* ----------------------*/ 
 .pie-principal{
     background-color: #ccc;
 }
 
+.pie-principal .mensajeria{
+    position: fixed; /* referencia es el viewport */
+    bottom: 20px;
+    right: 20px;
+    list-style: none;
+}
 /* Selector ID */
 /* #contactos{
     background-color: #ffff00;
