@@ -15,9 +15,18 @@
 // Map devuelve un nuevo arreglo
 const numeros = [5,20,1,8,9]
 
-const numerosMasUno = numeros.map((numero)=>{
-    return numero + 1
+// const numerosMasUno = numeros.map((numero)=>{
+//     return numero + 1
+// })
+
+// console.log(numerosMasUno)
+// filter y find
+
+const numerosFiltrados = numeros.filter((numero)=>{
+    return numero < 7
 })
 
-console.log(numerosMasUno)
-// filter y find
+console.log(numerosFiltrados)
+
+
+
